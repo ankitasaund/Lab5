@@ -134,10 +134,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     }
-    
-    func mapView(_mapView: MKMapView, rendererFor Overlay: MKOverlay) -> MKOverlayRenderer
-    {
-    let renderer = MKPolylineRenderer(overlay: Overlay)
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = (currentTransportType == .automobile) ?
             UIColor.blue : UIColor.orange
         renderer.lineWidth = 3.0
